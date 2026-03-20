@@ -4,11 +4,10 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
-      compileOnly("org.projectlombok:lombok:1.18.38")
+    compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
 
     compileOnly("org.jetbrains:annotations:26.0.2")
