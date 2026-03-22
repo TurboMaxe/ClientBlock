@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.support.uppercaseFirstChar
+
 plugins {
     java
     id("com.gradleup.shadow")
@@ -35,9 +37,14 @@ dependencies {
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
 }
 
-tasks {    
-    named("bruh") {
-       bruh() 
+tasks {
+    withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+        archiveFileName.set("${rootProject.name}-${project.name}-$version.jar")
     }
-    
+
+    named("build") {
+        dependsOn("shadowJar")
+    }
+
+
 }
