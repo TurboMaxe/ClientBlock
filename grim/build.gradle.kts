@@ -19,7 +19,6 @@ dependencies {
     compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
 
-    implementation("de.exlll:configlib-yaml:4.8.1")
     implementation("ac.grim.grimac:GrimAPI:1.2.4.0")
 }
 

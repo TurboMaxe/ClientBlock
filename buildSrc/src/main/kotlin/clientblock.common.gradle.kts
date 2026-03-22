@@ -1,5 +1,5 @@
 plugins {
-  java
+    java
     id("com.gradleup.shadow")
     id("io.papermc.paperweight.userdev")
     kotlin("jvm")
@@ -11,6 +11,10 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
 }
 
+fun bruh() {
+    println("HI NIGGAZ!")
+}
+
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
@@ -18,6 +22,7 @@ dependencies {
     compileOnly("org.jetbrains:annotations:26.0.2")
     annotationProcessor("org.jetbrains:annotations:26.0.2")
 
+    implementation("de.exlll:configlib-yaml:4.8.1")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.12.2")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.12.2")
@@ -28,4 +33,11 @@ dependencies {
 
     testCompileOnly("org.projectlombok:lombok:1.18.38")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
+}
+
+tasks {    
+    named("bruh") {
+       bruh() 
+    }
+    
 }

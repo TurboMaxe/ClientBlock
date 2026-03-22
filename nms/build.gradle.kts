@@ -3,7 +3,6 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 plugins {
     clientblock.common
     id("xyz.jpenilla.run-paper") version "2.3.1"
-    id("com.gradleup.shadow")
 }
 
 group = "io.turbo"
