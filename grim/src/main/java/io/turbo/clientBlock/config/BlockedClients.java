@@ -36,7 +36,7 @@ public class BlockedClients {
             return instance;
         }
 
-        return instance = YamlConfigurations.update(new File(ClientBlock.getInstance().getDataFolder(), "bounties.yml").toPath(), BlockedClients.class);
+        return instance = YamlConfigurations.update(new File(ClientBlock.getInstance().getDataFolder(), "blockedclients.yml").toPath(), BlockedClients.class);
     }
 
     public static BlockedClients load() {
