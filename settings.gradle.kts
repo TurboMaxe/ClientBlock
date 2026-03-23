@@ -1,5 +1,9 @@
-rootProject.name = "common"
-include("grim")
-include("nms")
-include("bukkit")
-include("common-kotlin")
+rootProject.name = "ClientBlock"
+include("grim", "nms")
+include("bukkit", "common-kotlin")
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
