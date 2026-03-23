@@ -23,11 +23,11 @@ public class WhitelistedPlayers {
     List<String> WhitelistedPlayers = new ArrayList<>();
 
     public void save() {
-        YamlConfigurations.save(new File(NMSclientblock.getInstance().getDataFolder(), "WhitelistedPlayers.yml").toPath(), WhitelistedPlayers.class, this);
+        YamlConfigurations.save(new File(NMSclientblock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath(), WhitelistedPlayers.class, this);
     }
 
     public static void reload() {
-        Path path = new File(NMSclientblock.getInstance().getDataFolder(), "WhitelistedPlayers.yml").toPath();
+        Path path = new File(NMSclientblock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath();
         instance = YamlConfigurations.update(path, WhitelistedPlayers.class);
     }
 
@@ -37,11 +37,11 @@ public class WhitelistedPlayers {
             return instance;
         }
 
-        return instance = YamlConfigurations.update(new File(NMSclientblock.getInstance().getDataFolder(), "bounties.yml").toPath(), WhitelistedPlayers.class);
+        return instance = YamlConfigurations.update(new File(NMSclientblock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath(), WhitelistedPlayers.class);
     }
 
     public static WhitelistedPlayers load() {
-        Path path = new File(NMSclientblock.getInstance().getDataFolder(), "WhitelistedPlayers.yml").toPath();
+        Path path = new File(NMSclientblock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath();
         return YamlConfigurations.load(path, WhitelistedPlayers.class);
     }
 }

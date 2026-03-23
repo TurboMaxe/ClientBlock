@@ -1,6 +1,0 @@
-name: NMSclientblock
-version: '1'
-main: io.turbo.nMSclientblock.NMSclientblock
-api-version: '1.21'
-authors: [ TurboMaxe ]
-description: DuckyMC's Class plugin
