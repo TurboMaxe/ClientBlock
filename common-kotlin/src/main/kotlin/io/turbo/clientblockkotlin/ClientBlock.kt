@@ -7,12 +7,7 @@ class ClientBlock : JavaPlugin() {
         instance = this
     }
 
-    fun getInstance(): ClientBlock {
-        return instance;
-    }
-
-
     override fun onEnable() {
-        logger.info("Enabled ClientBlock (kotlin)")
+        logger.info("Enabled ClientBlock (kotlin) v1.0.0")
     }
 }
