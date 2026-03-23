@@ -9,5 +9,6 @@ class ClientBlock : JavaPlugin() {
 
     override fun onEnable() {
         logger.info("Enabled ClientBlock (kotlin) v1.0.0")
+        server.pluginManager.registerEvents(PlayerListener(), this)
     }
 }
