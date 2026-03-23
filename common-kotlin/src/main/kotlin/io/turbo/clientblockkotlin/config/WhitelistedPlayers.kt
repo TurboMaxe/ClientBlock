@@ -30,7 +30,7 @@ class WhitelistedPlayers {
 
         fun reload() {
             val path: Path = File(
-                ClientBlock().instance,
+                ClientBlock().instance.dataFolder,
                 "WhitelistedPlayers.yml"
             ).toPath()
             instance = YamlConfigurations.update<WhitelistedPlayers?>(path, WhitelistedPlayers::class.java)
