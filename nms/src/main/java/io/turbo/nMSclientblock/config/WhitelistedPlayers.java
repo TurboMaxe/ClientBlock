@@ -1,10 +1,10 @@
-package io.turbo.nMSNMSclientblock.config;
+package io.turbo.nMSclientblock.config;
 
 
 import de.exlll.configlib.Comment;
 import de.exlll.configlib.Configuration;
 import de.exlll.configlib.YamlConfigurations;
-import io.turbo.NMSclientblock.NMSclientblock;
+import io.turbo.nMSclientblock.NMSclientblock;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
