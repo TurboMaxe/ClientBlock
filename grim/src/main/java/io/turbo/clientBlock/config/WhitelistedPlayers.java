@@ -27,21 +27,16 @@ public class WhitelistedPlayers {
     }
 
     public static void reload() {
-        Path path = new File(ClientBlock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath();
-        instance = YamlConfigurations.update(path, WhitelistedPlayers.class);
+       instance = YamlConfigurations.update(new File(ClientBlock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath(), WhitelistedPlayers.class);
     }
 
 
     public static WhitelistedPlayers i() {
-        if (instance != null) {
-            return instance;
-        }
-
+        if (instance != null) return instance;
         return instance = YamlConfigurations.update(new File(ClientBlock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath(), WhitelistedPlayers.class);
     }
 
     public static WhitelistedPlayers load() {
-        Path path = new File(ClientBlock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath();
-        return YamlConfigurations.load(path, WhitelistedPlayers.class);
+        return YamlConfigurations.load(new File(ClientBlock.getInstance().getDataFolder(), "whitelistedplayers.yml").toPath(), WhitelistedPlayers.class);
     }
 }
