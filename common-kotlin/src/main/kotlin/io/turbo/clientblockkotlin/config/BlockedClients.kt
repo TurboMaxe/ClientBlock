@@ -19,7 +19,7 @@ class BlockedClients {
     fun save() {
         YamlConfigurations.save<BlockedClients?>(
             File(
-                ClientBlock().instance.dataFolder, "blockedclients.yml"
+                ClientBlock.i()?.dataFolder, "blockedclients.yml"
             ).toPath(), BlockedClients::class.java, this
         )
     }
@@ -29,7 +29,7 @@ class BlockedClients {
 
         fun reload() {
             val path: Path = File(
-                ClientBlock().instance.dataFolder,
+                ClientBlock.i()?.dataFolder,
                 "blockedclients.yml"
             ).toPath()
             instance = YamlConfigurations.update<BlockedClients?>(path, BlockedClients::class.java)
@@ -43,14 +43,14 @@ class BlockedClients {
 
             return YamlConfigurations.update<BlockedClients?>(
                 File(
-                    ClientBlock().getDataFolder(), "bounties.yml"
+                    ClientBlock.i()?.dataFolder, "bounties.yml"
                 ).toPath(), BlockedClients::class.java
             ).also { instance = it }
         }
 
         fun load(): BlockedClients? {
             val path: Path = File(
-                ClientBlock().instance.getDataFolder(),
+                ClientBlock.i()?.dataFolder,
                 "blockedclients.yml"
             ).toPath()
             return YamlConfigurations.load<BlockedClients?>(path, BlockedClients::class.java)
