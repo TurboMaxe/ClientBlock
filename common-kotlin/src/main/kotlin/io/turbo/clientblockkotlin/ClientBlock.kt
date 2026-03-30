@@ -1,14 +1,18 @@
+package io.turbo.cli
+
 import org.bukkit.plugin.java.JavaPlugin
 
 class ClientBlock : JavaPlugin() {
-    var instance: ClientBlock
-
-    init {
-        instance = this
+    
+    override fun onEnable() {
+        instance = this;
+        logger.info("Enabled ClientBlock (kotlin) v1.0.0")
+        Bukkit.getPluginManager().registerEvents(PlayerListener(), this)
     }
 
-    override fun onEnable() {
-        logger.info("Enabled ClientBlock (kotlin) v1.0.0")
-        server.pluginManager.registerEvents(PlayerListener(), this)
+    companion object {
+        var instance: ClientBlock? = null
+
+        fun i() = instance
     }
 }
