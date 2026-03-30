@@ -16,7 +16,7 @@ class PlayerListener : Listener {
         BlockedClients.i()?.blockedClients?.forEach { string ->
             if (event.player.clientBrandName.equals(string)) {
                 event.player.kick()
-                ClientBlock().logger.info {
+                ClientBlock.i().logger.info {
                     " Player $event.player.name (IP: ${event.player.address}) was kicked for logging in on blacklisted client $string"}
         }
       }
