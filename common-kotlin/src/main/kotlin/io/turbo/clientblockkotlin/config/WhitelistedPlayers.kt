@@ -20,7 +20,7 @@ class WhitelistedPlayers {
     fun save() {
         YamlConfigurations.save<WhitelistedPlayers?>(
             File(
-                ClientBlock().instance.dataFolder, "WhitelistedPlayers.yml"
+                ClientBlock.i()?.dataFolder, "WhitelistedPlayers.yml"
             ).toPath(), WhitelistedPlayers::class.java as Class<WhitelistedPlayers?>?, this
         )
     }
@@ -30,7 +30,7 @@ class WhitelistedPlayers {
 
         fun reload() {
             val path: Path = File(
-                ClientBlock().instance.dataFolder,
+                ClientBlock.i()?.dataFolder,
                 "WhitelistedPlayers.yml"
             ).toPath()
             instance = YamlConfigurations.update<WhitelistedPlayers?>(path, WhitelistedPlayers::class.java)
@@ -43,14 +43,14 @@ class WhitelistedPlayers {
             }
 
             return YamlConfigurations.update<WhitelistedPlayers?>(
-                File(ClientBlock().instance.dataFolder, "bounties.yml"
+                File(ClientBlock.i()?.dataFolder, "bounties.yml"
                 ).toPath(), WhitelistedPlayers::class.java
             ).also { instance = it }
         }
 
         fun load(): WhitelistedPlayers? {
             val path: Path = File(
-                ClientBlock().instance.dataFolder,
+                ClientBlock.i()?.dataFolder,
                 "WhitelistedPlayers.yml"
             ).toPath()
             return YamlConfigurations.load<WhitelistedPlayers?>(path, WhitelistedPlayers::class.java)
