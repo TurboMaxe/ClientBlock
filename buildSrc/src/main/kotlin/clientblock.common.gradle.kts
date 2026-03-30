@@ -13,10 +13,6 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
 }
 
-fun bruh() {
-    println("HI NIGGAZ!")
-}
-
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
