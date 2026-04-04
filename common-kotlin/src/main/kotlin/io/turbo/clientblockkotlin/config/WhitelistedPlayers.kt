@@ -1,9 +1,9 @@
-package io.turbo.clientblockcommon.config
+package io.turbo.clientblockkotlin.config
 
-import ClientBlock
 import de.exlll.configlib.Comment
 import de.exlll.configlib.Configuration
 import de.exlll.configlib.YamlConfigurations
+import io.turbo.clientblockkotlin.ClientBlock
 import lombok.Getter
 import lombok.NoArgsConstructor
 import java.io.File
@@ -18,7 +18,7 @@ class WhitelistedPlayers {
     var WhitelistedPlayers: MutableList<String?> = ArrayList<String?>()
 
     fun save() {
-        YamlConfigurations.save<WhitelistedPlayers?>(
+        YamlConfigurations.save(
             File(
                 ClientBlock.i()?.dataFolder, "WhitelistedPlayers.yml"
             ).toPath(), WhitelistedPlayers::class.java as Class<WhitelistedPlayers?>?, this
@@ -43,7 +43,8 @@ class WhitelistedPlayers {
             }
 
             return YamlConfigurations.update<WhitelistedPlayers?>(
-                File(ClientBlock.i()?.dataFolder, "bounties.yml"
+                File(
+                    ClientBlock.i()?.dataFolder, "bounties.yml"
                 ).toPath(), WhitelistedPlayers::class.java
             ).also { instance = it }
         }
