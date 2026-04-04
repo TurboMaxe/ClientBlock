@@ -5,8 +5,8 @@ plugins {
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
-group = "org.example"
-version = "unspecified"
+group = "io.turbo.clientblockkotlin"
+version = "1"
 
 repositories {
   mavenCentral()
