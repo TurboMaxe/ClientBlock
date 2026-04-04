@@ -1,9 +1,9 @@
-package io.turbo.clientblockcommon.config
+package io.turbo.clientblockkotlin.config
 
-import ClientBlock
 import de.exlll.configlib.Comment
 import de.exlll.configlib.Configuration
 import de.exlll.configlib.YamlConfigurations
+import io.turbo.clientblockkotlin.ClientBlock
 import lombok.Getter
 import lombok.NoArgsConstructor
 import java.io.File
